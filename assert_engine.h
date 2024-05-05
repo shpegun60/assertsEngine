@@ -121,7 +121,7 @@ void __M_Warning(const char* const expr_str, const unsigned char expr,
  */
 
 #   define M_Assert_Break(Expr, beforeExpr, afterExpr, Msg, ...)																					\
-		_OPTIONAL_CHECK_SWITCH(__M_Assert_Break(Expr, #Expr, beforeExpr, afterExpr, Msg, ##__VA_ARGS__))
+        _OPTIONAL_CHECK_SWITCH(__M_Assert_Break(Expr, #Expr, beforeExpr, afterExpr, Msg, ##__VA_ARGS__))
 #   define __M_Assert_Break(Expr, Expr_txt, beforeExpr, afterExpr, Msg, ...)                                                            			\
     do {                                                                                                                                			\
         if (Expr) {                                                                                                                     			\

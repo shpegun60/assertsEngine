@@ -44,6 +44,7 @@ static inline void __M_SEND_ASSERT_MSG(const char* const header,
         case '0':
             descr = va_arg(args, char*);
 #	if !defined(M_MESSAGE_ALWAYS_ENABLE)
+            (void)descr;
             return;
 #   endif /* !defined(M_MESSAGE_ALWAYS_ENABLE) */
             break;
@@ -66,7 +67,7 @@ static inline void __M_SEND_ASSERT_MSG(const char* const header,
         fprintf(stderr, "\n%s\n", header);
         // print function if enable ------------------------------------------
 #if !defined(M_ASSERT_FUNCTION_NAME_TEXT_DISABLE)
-        fprintf(stderr, "Function:\t%s \n", func_name);
+        fprintf(stderr, "Function:\t\t%s\n", func_name);
 #endif /* !defined(M_ASSERT_FUNCTION_NAME_TEXT_DISABLE) */
 
 #if !defined(M_ASSERT_MSG_TEXT_DISABLE)
