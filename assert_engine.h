@@ -143,7 +143,7 @@ void __M_Warning(const char* const expr_str, const unsigned char expr,
 
 // else breaking asserts
 #   define M_Assert_BreakElse(Expr, trueExpr, falseBeforeExpr, falseAfterExpr, Msg, ...)                                                			\
-		_OPTIONAL_CHECK_SWITCH(__M_Assert_BreakElse(Expr, #Expr, trueExpr, falseBeforeExpr, falseAfterExpr, Msg, ##__VA_ARGS__))
+        _OPTIONAL_CHECK_SWITCH(__M_Assert_BreakElse(Expr, #Expr, trueExpr, falseBeforeExpr, falseAfterExpr, Msg, ##__VA_ARGS__))
 #   define __M_Assert_BreakElse(Expr, Expr_txt, trueExpr, falseBeforeExpr, falseAfterExpr, Msg, ...)                                    			\
     do {                                                                                                                                			\
         if(Expr) {                                                                                                                      			\
@@ -194,7 +194,7 @@ void __M_Warning(const char* const expr_str, const unsigned char expr,
 
 // else warning asserts
 #   define M_Assert_WarningElse(Expr, trueExpr, falseBeforeExpr, falseAfterExpr, Msg, ...)                                              			\
-		_OPTIONAL_CHECK_SWITCH(__M_Assert_WarningElse(Expr, #Expr, trueExpr, falseBeforeExpr, falseAfterExpr, Msg, ...))
+        _OPTIONAL_CHECK_SWITCH(__M_Assert_WarningElse(Expr, #Expr, trueExpr, falseBeforeExpr, falseAfterExpr, Msg, ##__VA_ARGS__))
 #   define __M_Assert_WarningElse(Expr, Expr_txt, trueExpr, falseBeforeExpr, falseAfterExpr, Msg, ...)                                  			\
     do {                                                                                                                                			\
         if(Expr) {                                                                                                                      			\
