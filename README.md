@@ -54,3 +54,180 @@ int _write(int file, char *ptr, int len)
 }
 
 ```
+
+## Test out:
+```cpp
+Program stdout
+Test case 15: Safe function call
+Test case 16: Debug message without parameters
+Test case 17: Debug message with one parameter: 0
+Test case 19: Debug message to file: 0
+Program stderr
+
+PROGRAMM EXIT WITH ERROR!!!
+Function:		main
+Assert failed:	RUNTIME ERROR Assert test: M_Assert_Break without parameters
+Expression:	1, value: 1
+Source:		/app/example.c, line: 540
+
+PROGRAMM EXIT WITH ERROR!!!
+Function:		main
+Assert failed:	RUNTIME ERROR Assert test: M_Assert_Break with parameter: 123
+Expression:	1, value: 1
+Source:		/app/example.c, line: 542
+
+PROGRAMM EXIT WITH ERROR!!!
+Function:		main
+Assert failed:	RUNTIME ERROR Assert test: M_Assert_Break with two parameters: 123, 456
+Expression:	1, value: 1
+Source:		/app/example.c, line: 544
+
+WARNING!!!
+Function:		main
+Assert failed:	RUNTIME WARNING Assert test: M_Assert_Warning without parameters
+Expression:	1, value: 1
+Source:		/app/example.c, line: 546
+
+WARNING!!!
+Function:		main
+Assert failed:	RUNTIME WARNING Assert test: M_Assert_Warning with parameter: 2
+Expression:	1, value: 1
+Source:		/app/example.c, line: 548
+
+WARNING!!!
+Function:		main
+Assert failed:	RUNTIME WARNING Assert test: M_Assert_Warning with two parameters: 2, 456
+Expression:	1, value: 1
+Source:		/app/example.c, line: 550
+
+WARNING!!!
+Function:		main
+Assert failed:	RUNTIME WARNING Assert test:M_Assert_Warning with two parameters: 3, 456
+Expression:	1, value: 1
+Source:		/app/example.c, line: 552
+
+PROGRAMM EXIT WITH ERROR!!!
+Function:		main
+Assert failed:	RUNTIME ERROR Assert test: M_Assert_Break with two parameters: 4, 456
+Expression:	1, value: 1
+Source:		/app/example.c, line: 554
+
+PROGRAMM EXIT WITH ERROR!!!
+Function:		main
+Assert failed:	RUNTIME ERROR Assert test: M_Assert_BreakSaveCheck with parameter: 6
+Expression:	1, value: 1
+Source:		/app/example.c, line: 558
+
+WARNING!!!
+Function:		main
+Assert failed:	RUNTIME WARNING Assert test: M_Assert_WarningSaveCheck with parameter: 7
+Expression:	1, value: 1
+Source:		/app/example.c, line: 560
+
+PROGRAMM EXIT WITH ERROR!!!
+Function:		main
+Assert failed:	sfsagsdggdgsg
+Expression:	if i == 0 not confirmed: passed to else, value: 0
+Source:		/app/example.c, line: 563
+
+WARNING!!!
+Function:		main
+Assert failed:	NO exists function
+Expression:	i, value: 0
+Source:		/app/example.c, line: 568
+
+PROGRAMM EXIT WITH ERROR!!!
+Function:		main
+Library Name:	hhhh
+Assert failed:	With library: Custom assert message with two parameters: 1, 456
+Expression:	1, value: 1
+Source:		/app/example.c, line: 570
+
+WARNING!!!
+Function:		main
+Library Name:	hhhh
+Assert failed:	With library: Custom warning message with two parameters: 2, 456
+Expression:	1, value: 1
+Source:		/app/example.c, line: 572
+
+PROGRAMM EXIT WITH ERROR!!!
+Function:		main
+Assert failed:	With error code: Assert with two parameters: 3, 123
+Expression:	1, value: 1
+Source:		/app/example.c, line: 574
+
+PROGRAMM EXIT WITH ERROR!!!
+Function:		main
+Assert failed:	Test case 1: Assertion failed without additional data
+Expression:	test_value == 0, value: 1
+Source:		/app/example.c, line: 582
+
+PROGRAMM EXIT WITH ERROR!!!
+Function:		main
+Assert failed:	Test case 2: Assertion failed with one parameter: 0
+Expression:	test_value == 0, value: 1
+Source:		/app/example.c, line: 584
+
+PROGRAMM EXIT WITH ERROR!!!
+Function:		main
+Assert failed:	Test case 3: Assertion failed with two parameters: 0, 123
+Expression:	test_value == 0, value: 1
+Source:		/app/example.c, line: 586
+
+WARNING!!!
+Function:		main
+Assert failed:	Test case 4: Warning without additional data
+Expression:	test_value == 0, value: 1
+Source:		/app/example.c, line: 588
+
+WARNING!!!
+Function:		main
+Assert failed:	Test case 5: Warning with one parameter: 0
+Expression:	test_value == 0, value: 1
+Source:		/app/example.c, line: 590
+
+WARNING!!!
+Function:		main
+Assert failed:	Test case 6: Warning with two parameters: 0, 123
+Expression:	test_value == 0, value: 1
+Source:		/app/example.c, line: 592
+
+PROGRAMM EXIT WITH ERROR!!!
+Function:		main
+Library Name:	lib_name
+Assert failed:	Test case 7: Assertion with library data
+Expression:	test_value == 0, value: 1
+Source:		/app/example.c, line: 596
+
+WARNING!!!
+Function:		main
+Library Name:	lib_name
+Assert failed:	Test case 8: Warning with library data: lib_name
+Expression:	test_value == 0, value: 1
+Source:		/app/example.c, line: 598
+
+PROGRAMM EXIT WITH ERROR!!!
+Function:		main
+Assert failed:	Test case 9: Assertion with enable code: 4207324
+Expression:	test_value == 0, value: 1
+Source:		/app/example.c, line: 600
+
+PROGRAMM EXIT WITH ERROR!!!
+Function:		main
+Assert failed:	Test case 11: M_Assert_BreakSaveCheck
+Expression:	test_value == 0, value: 1
+Source:		/app/example.c, line: 604
+
+WARNING!!!
+Function:		main
+Assert failed:	Test case 12: M_Assert_WarningSaveCheck
+Expression:	test_value == 0, value: 1
+Source:		/app/example.c, line: 606
+
+WARNING!!!
+Function:		main
+Assert failed:	Test case 14: M_Assert_WarningElse
+Expression:	if test_value != 0 not confirmed: passed to else, value: 0
+Source:		/app/example.c, line: 610
+Test case 18: Debug error message with two parameters: 0, error
+```
