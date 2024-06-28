@@ -224,7 +224,7 @@ void __M_assert_test()
     // Test warning assertion with two additional parameters
     M_Assert_Warning(test_value == 0, M_EMPTY, M_EMPTY, "Test case 6: Warning with two parameters: %d, %d", test_value, 123);
     // Test error assertion with library data
-    M_Assert_Break(test_value == 0, M_EMPTY, M_EMPTY, "[d]Test case 7: Assertion with library data: %d, %s", 1, "lib_name");
+    M_Assert_Break(test_value == 0, M_EMPTY, M_EMPTY, "[d]Test case 7: Assertion with library data", 1, "lib_name");
     // Test warning assertion with library data
     M_Assert_Warning(test_value == 0, M_EMPTY, M_EMPTY, "[s]Test case 8: Warning with library data: %s", "lib_name");
     // Test error assertion with error code
