@@ -54,7 +54,25 @@ int _write(int file, char *ptr, int len)
 }
 
 ```
+## for redusing resourse usage you need configure this library using these macros
+```cpp
+#
+#/*
+# * *****************************************************************************************************************************************************************************
+# *  smart asserts settings
+# * *****************************************************************************************************************************************************************************
+# */
+#
+//#define NDEBUG                              	// uncommit this if program in release version
+// =====> if NDEBUG is uncommited bellow defines have no meaning!!!!! <=====================================
+//#define M_MESSAGE_ALWAYS_ENABLE         		1   // enabling runtime assert message filter and additon library information (see additional information macro)
+//#define M_ASSERT_MSG_TEXT_DISABLE       		1   // disabling sending assert message text and do not saving this in .text section
+//#define M_ASSERT_EXPR_DISABLE           		1   // disabling sending assert expression text, value and do not saving this in .text section
+//#define M_ASSERT_FILE_LINE_TEXT_DISABLE 		1   // disabling sending assert file, line text and do not saving this in .text section
+//#define M_ASSERT_FUNCTION_NAME_TEXT_DISABLE 	1	// disabling sending assert function-name text, value and do not saving this in .text section
+//#define M_ASSERT_OPTIONAL_CHECKS_DISABLE 		1  	// disabling optional checks in user code
 
+```
 ## Test out:
 ```cpp
 Program stdout
